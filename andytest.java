@@ -1,1 +1,5 @@
-//this is gonna be lit
+public class andytest{
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+}
