@@ -4,11 +4,10 @@ Just for our reference while we learn java.
 ----------------------------------------------------
 ###Setup Bash:
 
-follow https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
-to set up the bash shell on win10
+follow [HowToGeek](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to set up the bash shell on win10
 
 Then in bash, type
-```
+```bash
 sudo apt-get update
 
 //This will install cnu/gnc/g++ compiler etc
@@ -25,7 +24,7 @@ sudo apt-get update
 ------------------------------------------------
 How to run the java code from bash
 
-```
+```bash
 cd into the git/java file directory
 
 then type javac FILENAME.java
