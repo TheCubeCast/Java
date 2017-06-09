@@ -2,7 +2,7 @@
 Just for our reference while we learn java.
 
 ----------------------------------------------------
-###Setup Bash:
+### Setup Bash:
 
 follow [HowToGeek](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to set up the bash shell on win10
 
