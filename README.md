@@ -1,16 +1,14 @@
 # Java
-CoWorking
+Just for our reference while we learn java.
 
 ----------------------------------------------------
-Setup Bash:
+###Setup Bash:
 
 follow https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
 to set up the bash shell on win10
 
-------
-
 Then in bash, type
-
+```
 sudo apt-get update
 
 //This will install cnu/gnc/g++ compiler etc
@@ -22,12 +20,15 @@ sudo apt-get update
 sudo apt-get install default-jdk
 
 sudo apt-get update
+```
 
 ------------------------------------------------
 How to run the java code from bash
 
+```
 cd into the git/java file directory
 
 then type javac FILENAME.java
 
 to run you type java FILENAME
+```
