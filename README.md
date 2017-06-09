@@ -29,4 +29,3 @@ sudo apt-get update
 then type `javac FILENAME.java`
 
 to run you type `java FILENAME`
-```
