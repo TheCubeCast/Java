@@ -7,5 +7,13 @@ public class petertest{
       System.out.println("Whats your name?");
       String choice = in.nextLine();
       System.out.println("Oh, your name is "+ choice +"!");
+
+      Scanner in = new Scanner(System.in);
+      System.out.println("Whats your favorite color?");
+      String choice = in.nextLine();
+      System.out.println("Oh, your favorite color is "+ choice +"!");
+
+
+
     }
   }
