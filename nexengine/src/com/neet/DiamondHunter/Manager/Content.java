@@ -55,6 +55,8 @@ public class Content {
 			int row = c / font[0].length;
 			int col = c % font[0].length;
 			g.drawImage(font[row][col], x + 8 * i, y, null);
+			
+	
 		}
 	}
 	
