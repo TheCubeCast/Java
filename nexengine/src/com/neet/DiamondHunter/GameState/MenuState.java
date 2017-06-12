@@ -74,11 +74,11 @@ public class MenuState extends GameState {
 			JukeBox.stop("MenuBackground");
 			gsm.setState(GameStateManager.PLAY);
 		}
-		if(currentOption == 0) {
+		if(currentOption == 1) {
 			JukeBox.stop("MenuBackground");
 			gsm.setState(GameStateManager.OPTIONS);
 		}
-		if(currentOption == 1) {
+		if(currentOption == 2) {
 			System.exit(0);
 		}
 	}
