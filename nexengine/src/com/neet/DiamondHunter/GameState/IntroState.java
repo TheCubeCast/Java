@@ -30,7 +30,7 @@ public class IntroState extends GameState {
 	public void init() {
 		ticks = 0;
 		try {
-			logo = ImageIO.read(getClass().getResourceAsStream("/Logo/cube.png"));
+			logo = ImageIO.read(getClass().getResourceAsStream("/Logo/cube2.png"));
 		}
 		catch(Exception e) {
 			e.printStackTrace();
