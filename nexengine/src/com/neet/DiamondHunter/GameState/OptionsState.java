@@ -45,7 +45,11 @@ public class OptionsState extends GameState {
 			larrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/lmarrow.png"));
 			JukeBox.load("/Music/introsound.wav", "introsound");
 			JukeBox.play("introsound");
-		}	
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void update() {
@@ -55,6 +59,10 @@ public class OptionsState extends GameState {
 	public void draw(Graphics2D g) {
 		
 		g.drawImage(bg, 0, 0, null);
+		
+			g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+			g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+			
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
@@ -77,12 +85,9 @@ public class OptionsState extends GameState {
 			selectOption();
 		}
 		
-		public void draw(Graphics2D g) {
-			g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-			g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-			
-		}
+		
 	}
+	
 	
 	private void selectOption() {
 		if(currentOption == 0) {
