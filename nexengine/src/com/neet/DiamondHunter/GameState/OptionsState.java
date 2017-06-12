@@ -45,9 +45,13 @@ public class OptionsState extends GameState {
 			larrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/lmarrow.png"));
 			JukeBox.load("/Music/introsound.wav", "introsound");
 			JukeBox.play("introsound");
+<<<<<<< HEAD
 		}
 		
 		catch(Exception e) {
+=======
+		} catch(Exception e) {
+>>>>>>> 6706bb02c1f1b25e756b38145ba5743ba2ca7d75
 			e.printStackTrace();
 		}
 	}
@@ -66,6 +70,8 @@ public class OptionsState extends GameState {
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
+		g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+		g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
 		
 		if(currentOption == 0) g.drawImage(diamond, 123, 87, null);
 		else if(currentOption == 1) g.drawImage(diamond, 123, 97, null);
@@ -84,8 +90,11 @@ public class OptionsState extends GameState {
 			JukeBox.play("collect");
 			selectOption();
 		}
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 6706bb02c1f1b25e756b38145ba5743ba2ca7d75
 	}
 	
 	
