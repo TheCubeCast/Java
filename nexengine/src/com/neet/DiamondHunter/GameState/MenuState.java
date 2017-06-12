@@ -32,6 +32,8 @@ public class MenuState extends GameState {
 		diamond = Content.DIAMOND[0][0];
 		JukeBox.load("/SFX/collect.wav", "collect");
 		JukeBox.load("/SFX/menuoption.wav", "menuoption");
+		JukeBox.load("/SFX/menuBack.mp3", "MenuBackground");
+		JukeBox.play("MenuBackground");
 	}
 	
 	public void update() {
