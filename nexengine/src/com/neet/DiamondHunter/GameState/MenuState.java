@@ -18,6 +18,7 @@ public class MenuState extends GameState {
 	private int currentOption = 0;
 	private String[] options = {
 		"START",
+		"OPTIONS",
 		"QUIT"
 	};
 	
@@ -46,10 +47,11 @@ public class MenuState extends GameState {
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
+		Content.drawString(g, options[2], 140, 110);
 		
 		if(currentOption == 0) g.drawImage(diamond, 123, 87, null);
 		else if(currentOption == 1) g.drawImage(diamond, 123, 97, null);
-		
+		else if(currentOption == 2) g.drawImage(diamond, 123, 107, null);
 	}
 	
 	public void handleInput() {
@@ -71,6 +73,10 @@ public class MenuState extends GameState {
 		if(currentOption == 0) {
 			JukeBox.stop("MenuBackground");
 			gsm.setState(GameStateManager.PLAY);
+		}
+		if(currentOption == 0) {
+			JukeBox.stop("MenuBackground");
+			gsm.setState(GameStateManager.OPTIONS);
 		}
 		if(currentOption == 1) {
 			System.exit(0);
