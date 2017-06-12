@@ -10,18 +10,22 @@ import javax.imageio.ImageIO;
 
 import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.Manager.GameStateManager;
+import com.neet.DiamondHunter.Manager.JukeBox;
 import com.neet.DiamondHunter.Manager.Keys;
+
 
 public class IntroState extends GameState {
 	
 	private BufferedImage logo;
+	private BufferedImage logo2;
+	private BufferedImage logo3;
 	
 	private int alpha;
 	private int ticks;
 	
-	private final int FADE_IN = 60;
-	private final int LENGTH = 60;
-	private final int FADE_OUT = 60;
+	private final int FADE_IN = 20;
+	private final int LENGTH = 20;
+	private final int FADE_OUT = 20;
 	
 	public IntroState(GameStateManager gsm) {
 		super(gsm);
@@ -31,6 +35,10 @@ public class IntroState extends GameState {
 		ticks = 0;
 		try {
 			logo = ImageIO.read(getClass().getResourceAsStream("/Logo/cube2.png"));
+			logo2 = ImageIO.read(getClass().getResourceAsStream("/Logo/logo.png"));
+			logo3 = ImageIO.read(getClass().getResourceAsStream("/Logo/brought.png"));
+			JukeBox.load("/Music/introsound.wav", "introsound");
+			JukeBox.play("introsound");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -56,7 +64,9 @@ public class IntroState extends GameState {
 	public void draw(Graphics2D g) {
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
-		g.drawImage(logo, 0, 0, GamePanel.WIDTH, GamePanel.HEIGHT, null);
+		g.drawImage(logo, 25, 100, 100, 100, null);
+		g.drawImage(logo2, 160, 90, 140, 100, null);
+		g.drawImage(logo3, 80, 6, 160, 80, null);
 		g.setColor(new Color(0, 0, 0, alpha));
 		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 	}
