@@ -35,6 +35,7 @@ public class MenuState extends GameState {
 		JukeBox.load("/SFX/menuoption.wav", "menuoption");
 		JukeBox.load("/Music/menuBack.mp3", "MenuBackground");
 		JukeBox.loop("MenuBackground");
+		JukeBox.setVolume("MenuBackground", 0.02f);
 	}
 	
 	public void update() {
@@ -75,7 +76,6 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.PLAY);
 		}
 		if(currentOption == 1) {
-			JukeBox.stop("MenuBackground");
 			gsm.setState(GameStateManager.OPTIONS);
 		}
 		if(currentOption == 2) {

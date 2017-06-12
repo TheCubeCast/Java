@@ -11,6 +11,7 @@ import java.awt.Graphics2D;
 import com.neet.DiamondHunter.GameState.GameOverState;
 import com.neet.DiamondHunter.GameState.GameState;
 import com.neet.DiamondHunter.GameState.IntroState;
+import com.neet.DiamondHunter.GameState.OptionsState;
 import com.neet.DiamondHunter.GameState.MenuState;
 import com.neet.DiamondHunter.GameState.PauseState;
 import com.neet.DiamondHunter.GameState.PlayState;
@@ -65,7 +66,7 @@ public class GameStateManager {
 			gameStates[i].init();
 		}
 		else if(i == OPTIONS) {
-			gameStates[i] = new PlayState(this);
+			gameStates[i] = new OptionsState(this);
 			gameStates[i].init();
 		}
 	}
