@@ -45,7 +45,6 @@ public class OptionsState extends GameState {
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
-		Content.drawString(g, options[2], 140, 110);
 		
 		if(currentOption == 0) g.drawImage(diamond, 123, 87, null);
 		else if(currentOption == 1) g.drawImage(diamond, 123, 97, null);
