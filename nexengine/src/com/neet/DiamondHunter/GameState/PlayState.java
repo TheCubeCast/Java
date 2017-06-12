@@ -208,7 +208,7 @@ public class PlayState extends GameState {
 		tileMap.update();
 		
 		if(oldxs != xsector || oldys != ysector) {
-			JukeBox.play("mapmove");
+			//JukeBox.play("mapmove");
 		}
 		
 		if(tileMap.isMoving()) return;

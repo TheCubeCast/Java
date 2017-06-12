@@ -200,7 +200,7 @@ public class TileMap {
 			}
 		}
 		
-		fixBounds();
+		//fixBounds();
 		
 		colOffset = -this.x / tileSize;
 		rowOffset = -this.y / tileSize;
