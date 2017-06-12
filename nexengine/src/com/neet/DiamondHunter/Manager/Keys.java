@@ -29,10 +29,10 @@ public class Keys {
 	public static int F1 = 7;
 	
 	public static void keySet(int i, boolean b) {
-		if(i == KeyEvent.VK_W) keyState[UP] = b;
-		else if(i == KeyEvent.VK_A) keyState[LEFT] = b;
-		else if(i == KeyEvent.VK_S) keyState[DOWN] = b;
-		else if(i == KeyEvent.VK_D) keyState[RIGHT] = b;
+		if(i == KeyEvent.VK_W || i == KeyEvent.VK_UP) keyState[UP] = b;
+		else if(i == KeyEvent.VK_A || i == KeyEvent.VK_LEFT) keyState[LEFT] = b;
+		else if(i == KeyEvent.VK_S || i == KeyEvent.VK_DOWN) keyState[DOWN] = b;
+		else if(i == KeyEvent.VK_D || i == KeyEvent.VK_RIGHT) keyState[RIGHT] = b;
 		else if(i == KeyEvent.VK_SPACE) keyState[SPACE] = b;
 		else if(i == KeyEvent.VK_ENTER) keyState[ENTER] = b;
 		else if(i == KeyEvent.VK_ESCAPE) keyState[ESCAPE] = b;
