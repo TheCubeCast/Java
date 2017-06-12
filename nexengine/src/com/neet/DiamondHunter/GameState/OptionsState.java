@@ -2,22 +2,29 @@
 
 package com.neet.DiamondHunter.GameState;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import javax.imageio.ImageIO;
+
+import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
 import com.neet.DiamondHunter.Manager.Keys;
 
+
 public class OptionsState extends GameState {
 	
 	private BufferedImage bg;
 	private BufferedImage diamond;
+	private BufferedImage rarrow;
+	private BufferedImage larrow;
 	
 	private int currentOption = 0;
 	private String[] options = {
-		"Volume",
+		"Volume  " + "1",
 		"BACK"
 	};
 	
@@ -33,6 +40,12 @@ public class OptionsState extends GameState {
 		JukeBox.load("/SFX/collect.wav", "collect");
 		JukeBox.load("/SFX/menuoption.wav", "menuoption");
 		JukeBox.load("/Music/menuBack.mp3", "MenuBackground");
+		try {
+			rarrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/rmarrow.png"));
+			larrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/lmarrow.png"));
+			JukeBox.load("/Music/introsound.wav", "introsound");
+			JukeBox.play("introsound");
+		}	
 	}
 	
 	public void update() {
@@ -62,6 +75,12 @@ public class OptionsState extends GameState {
 		if(Keys.isPressed(Keys.ENTER)) {
 			JukeBox.play("collect");
 			selectOption();
+		}
+		
+		public void draw(Graphics2D g) {
+			g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+			g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+			
 		}
 	}
 	
