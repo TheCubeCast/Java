@@ -64,9 +64,9 @@ public class IntroState extends GameState {
 	public void draw(Graphics2D g) {
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
-		g.drawImage(logo, 25, 100, 100, 100, null);
-		g.drawImage(logo2, 160, 90, 140, 100, null);
-		g.drawImage(logo3, 80, 6, 160, 80, null);
+		g.drawImage(logo, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+		g.drawImage(logo2, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+		g.drawImage(logo3, GamePanel.WIDTH/4, GamePanel.HEIGHT/16, 80*GamePanel.SCALE, 40*GamePanel.SCALE, null);
 		g.setColor(new Color(0, 0, 0, alpha));
 		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 	}
