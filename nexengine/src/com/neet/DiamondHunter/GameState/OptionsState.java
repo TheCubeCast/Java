@@ -58,9 +58,8 @@ public class OptionsState extends GameState {
 		
 		g.drawImage(bg, 0, 0, null);
 		
-			g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-			g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-			
+		g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+		g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
