@@ -22,7 +22,7 @@ public class OptionsState extends GameState {
 	
 	private int currentOption = 0;
 	private String[] options = {
-		"Volume: " + "100",
+		"Volume:" + "<" + "100" + ">",
 		"BACK"
 	};
 	

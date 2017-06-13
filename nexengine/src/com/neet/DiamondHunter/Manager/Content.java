@@ -49,7 +49,11 @@ public class Content {
 			char c = s.charAt(i);
 			if(c == 47) c = 36; // slash
 			if(c == 58) c = 37; // colon
-			if(c == 32) c = 38; // space
+			
+			if(c == 60) c = 38; // left arrow
+			if(c == 62) c = 39; // right arrow
+			
+			if(c == 32) c = 40; // space
 			if(c >= 65 && c <= 90) c -= 65; // letters
 			if(c >= 48 && c <= 57) c -= 22; // numbers
 			int row = c / font[0].length;
