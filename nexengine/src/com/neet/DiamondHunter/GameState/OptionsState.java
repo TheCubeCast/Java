@@ -67,8 +67,10 @@ public class OptionsState extends GameState {
 	public void handleInput() {
 		if(Keys.isPressed(Keys.LEFT) && currentOption == 0) 
 			JukeBox.play("volume");
+			//set vol --
 		if(Keys.isPressed(Keys.RIGHT) && currentOption == 0) 
 			JukeBox.play("volume");
+			//set vol ++
 			
 		if(Keys.isPressed(Keys.DOWN) && currentOption < options.length - 1) {
 			JukeBox.play("menuoption");
