@@ -43,8 +43,6 @@ public class OptionsState extends GameState {
 		try {
 			rarrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/rmarrow.png"));
 			larrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/lmarrow.png"));
-			JukeBox.load("/Music/introsound.wav", "introsound");
-			JukeBox.play("introsound");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
