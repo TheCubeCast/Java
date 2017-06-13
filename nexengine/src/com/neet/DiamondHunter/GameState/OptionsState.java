@@ -2,13 +2,11 @@
 
 package com.neet.DiamondHunter.GameState;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
 
-import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
@@ -24,7 +22,7 @@ public class OptionsState extends GameState {
 	
 	private int currentOption = 0;
 	private String[] options = {
-		"Volume  " + "1",
+		"Volume:" + "<" + "100" + ">",
 		"BACK"
 	};
 	
@@ -38,7 +36,7 @@ public class OptionsState extends GameState {
 		bg = Content.MENUBG[0][0];
 		diamond = Content.DIAMOND[0][0];
 		JukeBox.load("/SFX/collect.wav", "collect");
-		JukeBox.load("/SFX/menuoption.wav", "menuoption");
+		JukeBox.load("/SFX/volume.wav", "volume");
 		JukeBox.load("/Music/menuBack.mp3", "MenuBackground");
 		try {
 			rarrow = ImageIO.read(getClass().getResourceAsStream("/Sprites/rmarrow.png"));
@@ -56,19 +54,22 @@ public class OptionsState extends GameState {
 		
 		g.drawImage(bg, 0, 0, null);
 		
-		g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-		g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
+		g.drawImage(larrow, 198, 90, 8, 8, null);
+		g.drawImage(rarrow, 229, 90, 8, 8, null);
 		
 		Content.drawString(g, options[0], 140, 90);
 		Content.drawString(g, options[1], 140, 100);
-		g.drawImage(larrow, GamePanel.WIDTH/10, 5*(GamePanel.HEIGHT/12), 50*GamePanel.SCALE, 50*GamePanel.SCALE, null);
-		g.drawImage(rarrow, GamePanel.WIDTH/2, 6*(GamePanel.HEIGHT/16), 70*GamePanel.SCALE, 50*GamePanel.SCALE, null);
 		
 		if(currentOption == 0) g.drawImage(diamond, 123, 87, null);
 		else if(currentOption == 1) g.drawImage(diamond, 123, 97, null);
 	}
 	
 	public void handleInput() {
+		if(Keys.isPressed(Keys.LEFT) && currentOption == 0) 
+			JukeBox.play("volume");
+		if(Keys.isPressed(Keys.RIGHT) && currentOption == 0) 
+			JukeBox.play("volume");
+			
 		if(Keys.isPressed(Keys.DOWN) && currentOption < options.length - 1) {
 			JukeBox.play("menuoption");
 			currentOption++;
@@ -85,7 +86,7 @@ public class OptionsState extends GameState {
 	
 	private void selectOption() {
 		if(currentOption == 0) {
-			gsm.setState(GameStateManager.OPTIONS);
+			gsm.setState(GameStateManager.MENU);
 		}
 		if(currentOption == 1) {
 			gsm.setState(GameStateManager.MENU);

@@ -83,7 +83,7 @@ public class PlayState extends GameState {
 		player.setTotalDiamonds(diamonds.size());
 		
 		// set up camera position
-		sectorSize = 160;
+		sectorSize = 16;
 		xsector = player.getx() / sectorSize;
 		ysector = player.gety() / sectorSize;
 		tileMap.setPositionImmediately(-xsector * sectorSize, -ysector * sectorSize);
