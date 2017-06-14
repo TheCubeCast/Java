@@ -304,11 +304,6 @@ public class PlayState extends GameState {
 		// draw hud
 		hud.draw(g);
 		
-		// draw transition boxes
-		g.setColor(java.awt.Color.BLACK);
-		for(int i = 0; i < boxes.size(); i++) {
-			g.fill(boxes.get(i));
-		}
 		
 	}
 	
